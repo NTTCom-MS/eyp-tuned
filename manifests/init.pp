@@ -1,12 +1,15 @@
-# === Copyright
-#
-# Copyright 2015 Your name here, unless otherwise noted.
-#
-class tuned($ensure='installed') inherits tuned::params {
+class tuned (
+              $manage_package        = true,
+              $package_ensure        = 'installed',
+              $manage_service        = true,
+              $manage_docker_service = true,
+              $service_ensure        = 'running',
+              $service_enable        = true,
+            ) inherits tuned::params {
 
-  package { 'tuned':
-    ensure => $ensure,
-  }
-
+  class { '::tuned::install': }
+  -> class { '::tuned::config': }
+  ~> class { '::tuned::service': }
+  -> Class['::tuned']
 
 }
