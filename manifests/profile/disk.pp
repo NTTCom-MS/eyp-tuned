@@ -1,3 +1,4 @@
+# puppet2sitepp @tunedprofiledisks
 define tuned::profile::disk (
                               $profile_name = $name,
                               $elevator     = undef,
@@ -26,7 +27,7 @@ define tuned::profile::disk (
         group   => 'root',
         mode    => '0644',
         content => template("${module_name}/ktune-sysconfig.erb"),
-        notify  => Class['::tuned::service'],
+        notify  => [ Class['::tuned::service'], Exec['enable profile tuned'] ],
       }
     }
 
