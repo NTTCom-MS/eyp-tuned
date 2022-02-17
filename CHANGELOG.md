@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 0.2.2
+
+* Added RHEL8 support
+
+
 ## 0.2.1
 
 * bugfix: **tuned::profile::disk** to notify profile enable exec
