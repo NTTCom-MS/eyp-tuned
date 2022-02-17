@@ -1,6 +1,6 @@
 {
   "name": "eyp-tuned",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "author": "eyp",
   "summary": "tuned - manages custom profiles",
   "license": "Apache-2.0",
@@ -14,7 +14,7 @@
   "operatingsystem_support": [
     {
       "operatingsystem": "RedHat",
-      "operatingsystemrelease": [ "6", "7" ]
+      "operatingsystemrelease": [ "6", "7", "8" ]
     },
     {
       "operatingsystem": "CentOS",

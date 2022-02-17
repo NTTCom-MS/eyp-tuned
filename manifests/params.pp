@@ -14,7 +14,7 @@ class tuned::params {
             $service_name_ktune = 'ktune'
             $tuned_profiles_basepath = '/etc/tune-profiles'
         }
-        /^7.*$/:
+        /^[7-8].*$/:
         {
             $service_name_ktune = undef
             $tuned_profiles_basepath = '/usr/lib/tuned'
